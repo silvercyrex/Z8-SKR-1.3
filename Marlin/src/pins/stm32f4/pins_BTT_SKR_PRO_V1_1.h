@@ -31,7 +31,7 @@
 
 // Use one of these or SDCard-based Emulation will be used
 //#define SRAM_EEPROM_EMULATION                   // Use BackSRAM-based EEPROM emulation
-//#define FLASH_EEPROM_EMULATION                  // Use Flash-based EEPROM emulation
+#define FLASH_EEPROM_EMULATION                  // Use Flash-based EEPROM emulation
 
 //
 // Servos
@@ -93,11 +93,11 @@
   #define E1_CS_PIN                         PG15
 #endif
 
-#define E2_STEP_PIN                         PD13
-#define E2_DIR_PIN                          PG9
-#define E2_ENABLE_PIN                       PF0
-#ifndef E2_CS_PIN
-  #define E2_CS_PIN                         PG12
+#define Z2_STEP_PIN                         PD13
+#define Z2_DIR_PIN                          PG9
+#define Z2_ENABLE_PIN                       PF0
+#ifndef Z2_CS_PIN
+  #define Z2_CS_PIN                         PG12
 #endif
 
 //
@@ -152,8 +152,8 @@
   #define E1_SERIAL_TX_PIN                  PD1
   #define E1_SERIAL_RX_PIN                  PD1
 
-  #define E2_SERIAL_TX_PIN                  PD6
-  #define E2_SERIAL_RX_PIN                  PD6
+  #define Z2_SERIAL_TX_PIN                  PD6
+  #define Z2_SERIAL_RX_PIN                  PD6
 
   // Reduce baud rate to improve software serial reliability
   #define TMC_BAUD_RATE 19200
