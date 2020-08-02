@@ -2519,7 +2519,7 @@
    *
    * Values from 0..1023, -1 to disable homing phase for that axis.
    */
-   #define TMC_HOME_PHASE { 896, 896, 896 }
+   #define TMC_HOME_PHASE { 896, 384, 128 }
 
   /**
    * Beta feature!
@@ -3031,8 +3031,8 @@
  * The current sensor feeds DC voltage (relative to the measured current) to an analog pin
  * The voltage sensor feeds DC voltage (relative to the measured voltage) to an analog pin
  */
-#define POWER_MONITOR_CURRENT   // Monitor the system current
-#define POWER_MONITOR_VOLTAGE   // Monitor the system voltage
+//#define POWER_MONITOR_CURRENT   // Monitor the system current
+//#define POWER_MONITOR_VOLTAGE   // Monitor the system voltage
 #if EITHER(POWER_MONITOR_CURRENT, POWER_MONITOR_VOLTAGE)
   #define POWER_MONITOR_VOLTS_PER_AMP   0.05000   // Input voltage to the MCU analog pin per amp  - DO NOT apply more than ADC_VREF!
   #define POWER_MONITOR_CURRENT_OFFSET -1         // Offset value for current sensors with linear function output
